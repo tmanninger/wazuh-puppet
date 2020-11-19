@@ -70,6 +70,8 @@
 <%= scope.function_template(["wazuh/fragments/_wodle_openscap.erb"]) -%>
 <%- end -%>
 
+<%= scope.function_template(["wazuh/fragments/_auth.erb"]) -%>
+
 <%- if @enable_wodle_ciscat and @wodle_ciscat_content -%>
 <%= scope.function_template(["wazuh/fragments/_wodle_ciscat.erb"]) -%>
 <%- end -%>
