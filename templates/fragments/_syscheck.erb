@@ -141,6 +141,8 @@
   <%- end -%>
   <%- if @ossec_syscheck_nodiff -%>
   <nodiff><%=@ossec_syscheck_nodiff%></nodiff>
+  <nodiff type="sregex">^/secrets/</nodiff>
+  <nodiff><%=@ossec_syscheck_nodiff%></nodiff>
   <%- end -%>
   <%- if @ossec_syscheck_skip_nfs -%>
   <skip_nfs><%=@ossec_syscheck_skip_nfs%></skip_nfs>
