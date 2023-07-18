@@ -622,7 +622,7 @@ class wazuh::manager (
       file { '/var/ossec/etc/sslmanager.key':
         content => $wazuh_manager_server_key,
         owner   => 'root',
-        group   => 'ossec',
+        group   => 'wazuh',
         mode    => '0640',
         require => Package[$wazuh::params_manager::server_package],
         notify  => Service[$wazuh::params_manager::server_service],
@@ -631,7 +631,7 @@ class wazuh::manager (
       file { '/var/ossec/etc/sslmanager.cert':
         content => $wazuh_manager_server_crt,
         owner   => 'root',
-        group   => 'ossec',
+        group   => 'wazuh',
         mode    => '0640',
         require => Package[$wazuh::params_manager::server_package],
         notify  => Service[$wazuh::params_manager::server_service],
@@ -675,7 +675,7 @@ class wazuh::manager (
 
   file { '/var/ossec/api/configuration/api.yaml':
     owner   => 'root',
-    group   => 'ossec',
+    group   => 'wazuh',
     mode    => '0640',
     content => template('wazuh/wazuh_api_yml.erb'),
     require => Package[$wazuh::params_manager::server_package],
