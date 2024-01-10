@@ -186,9 +186,6 @@ class wazuh::agent (
   $wodle_syscollector_processes      = $wazuh::params_agent::wodle_syscollector_processes,
   $wodle_syscollector_hotfixes       = $wazuh::params_agent::wodle_syscollector_hotfixes,
 
-  # Docker-listener
-  $wodle_docker_listener_disabled    = $wazuh::params_agent::wodle_docker_listener_disabled,
-
   # Localfile
   $ossec_local_files                 = $wazuh::params_agent::default_local_files,
 
